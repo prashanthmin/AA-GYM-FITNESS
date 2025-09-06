@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { MapPin, ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
+import { MapPin, ChevronLeft, ChevronRight, ExternalLink, QrCode } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { branch1Data } from '../data/mockData';
 
 const Branch1 = () => {
@@ -116,7 +117,8 @@ const Branch1 = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            {/* Address and Google Maps */}
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <MapPin className="h-6 w-6 text-red-600" />
@@ -140,6 +142,24 @@ const Branch1 = () => {
               </div>
             </div>
 
+            {/* QR Code Section */}
+            <div className="text-center space-y-4">
+              <div className="w-32 h-32 bg-white border-2 border-gray-300 rounded-lg mx-auto flex items-center justify-center shadow-md">
+                <div className="text-center">
+                  <QrCode className="h-16 w-16 text-red-600 mx-auto mb-2" />
+                  <p className="text-xs text-gray-500">QR Code</p>
+                </div>
+              </div>
+              <div>
+                <Link to={branch1Data.qrCode.url}>
+                  <Button variant="outline" className="border-red-600 text-red-600 hover:bg-red-50 px-4 py-2 text-sm">
+                    {branch1Data.qrCode.label}
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Map Placeholder */}
             <div className="h-64 bg-gray-200 rounded-lg flex items-center justify-center">
               <div className="text-center text-gray-600">
                 <MapPin className="h-16 w-16 mx-auto mb-4 text-red-600" />
