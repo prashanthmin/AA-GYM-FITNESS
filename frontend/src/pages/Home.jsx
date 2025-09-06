@@ -48,31 +48,22 @@ const Home = () => {
             Your browser does not support the video tag.
           </video>
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </div>
 
-        {/* Hero Content */}
+        {/* Hero Content - Only Buttons */}
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-            <span className="text-white">Transform Your</span>
-            <span className="block text-red-500 mt-2">Body & Mind</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed">
-            Choose your preferred branch and start your fitness journey today
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             {/* Branches Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                  <MapPin className="mr-2 h-5 w-5" />
+                <Button className="bg-red-600 hover:bg-red-700 text-white px-12 py-6 text-xl font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                  <MapPin className="mr-3 h-6 w-6" />
                   Branches
-                  <ChevronDown className="ml-2 h-5 w-5" />
+                  <ChevronDown className="ml-3 h-6 w-6" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-48 bg-white border border-gray-200 rounded-lg shadow-lg">
+              <DropdownMenuContent className="w-56 bg-white border border-gray-200 rounded-lg shadow-lg">
                 <DropdownMenuItem asChild>
                   <Link to="/branch1" className="flex items-center px-4 py-3 hover:bg-gray-50 text-gray-700 cursor-pointer">
                     <MapPin className="mr-2 h-4 w-4 text-red-600" />
@@ -92,10 +83,10 @@ const Home = () => {
             <Link to="/nutrition">
               <Button 
                 variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+                className="border-2 border-white text-white hover:bg-white hover:text-black px-12 py-6 text-xl font-semibold rounded-lg transition-all duration-300 hover:scale-105"
               >
                 Nutrition
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-3 h-6 w-6" />
               </Button>
             </Link>
           </div>
@@ -135,24 +126,6 @@ const Home = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-black text-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to <span className="text-red-500">Transform</span> Your Life?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of members who have already started their fitness journey with us
-          </p>
-          <Link to="/contact">
-            <Button className="bg-red-600 hover:bg-red-700 text-white px-12 py-4 text-xl font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-              Start Your Journey Today
-              <ArrowRight className="ml-2 h-6 w-6" />
-            </Button>
-          </Link>
         </div>
       </section>
     </div>

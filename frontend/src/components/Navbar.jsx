@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Dumbbell } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 
 const Navbar = () => {
@@ -43,9 +43,6 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <Button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105">
-              Join Now
-            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -77,11 +74,6 @@ const Navbar = () => {
                   {link.label}
                 </Link>
               ))}
-              <div className="px-3 py-2">
-                <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg font-medium">
-                  Join Now
-                </Button>
-              </div>
             </div>
           </div>
         )}

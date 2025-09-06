@@ -22,6 +22,11 @@ export const branch1Data = {
   name: "Downtown Branch",
   address: "123 Main Street, Downtown",
   mapLink: "https://maps.google.com/?q=40.7589,-73.9851",
+  qrCode: {
+    description: "QR Code for Downtown Branch",
+    url: "/branch1",
+    label: "Visit Downtown Branch Page"
+  },
   galleryImages: [
     {
       id: 1,
@@ -87,6 +92,11 @@ export const branch2Data = {
   name: "Suburban Branch",
   address: "456 Oak Avenue, Suburbia",
   mapLink: "https://maps.google.com/?q=40.7505,-73.9934",
+  qrCode: {
+    description: "QR Code for Suburban Branch",
+    url: "/branch2",
+    label: "Visit Suburban Branch Page"
+  },
   galleryImages: [
     {
       id: 1,
