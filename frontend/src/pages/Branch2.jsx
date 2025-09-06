@@ -136,7 +136,6 @@ const Branch2 = () => {
                     <ExternalLink className="mr-2 h-5 w-5" />
                     View on Google Maps
                   </Button>
-                </Button>
                 </a>
               </div>
             </div>
