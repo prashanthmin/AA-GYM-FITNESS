@@ -23,6 +23,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <Toaster />
       </BrowserRouter>
     </div>
   );
