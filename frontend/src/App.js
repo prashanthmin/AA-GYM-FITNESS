@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Branch1 from "./pages/Branch1";
 import Branch2 from "./pages/Branch2";
+import Nutrition from "./pages/Nutrition";
 import { Toaster } from "./components/ui/toaster";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/branch1" element={<Branch1 />} />
             <Route path="/branch2" element={<Branch2 />} />
+            <Route path="/nutrition" element={<Nutrition />} />
           </Routes>
         </main>
         <Footer />
