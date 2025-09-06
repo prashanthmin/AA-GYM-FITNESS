@@ -21,9 +21,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 hover:text-red-500 transition-colors">
-            <Dumbbell className="h-8 w-8 text-red-500" />
-            <span className="font-bold text-xl">AA Fitness</span>
+          <Link to="/" className="flex items-center space-x-3 hover:text-red-500 transition-colors">
+            <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center border-2 border-red-500 hover:scale-110 transition-transform duration-300">
+              <span className="text-white font-semibold text-xs">Logo</span>
+            </div>
+            <div>
+              <span className="font-bold text-xl block">AA Fitness</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
