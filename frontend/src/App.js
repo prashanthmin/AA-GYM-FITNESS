@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Branch1 from "./pages/Branch1";
 import Branch2 from "./pages/Branch2";
+import { Toaster } from "./components/ui/toaster";
 
 function App() {
   return (
