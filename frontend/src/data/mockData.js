@@ -1,4 +1,5 @@
 // Mock data for AA Fitness app
+import { Utensils, Coffee, Apple, Salad, Target, Droplets, Zap, Clock } from 'lucide-react';
 
 export const contactInfo = {
   profile: {
@@ -20,146 +21,280 @@ export const contactInfo = {
 export const branch1Data = {
   name: "Downtown Branch",
   address: "123 Main Street, Downtown",
-  equipment: [
+  mapLink: "https://maps.google.com/?q=40.7589,-73.9851",
+  galleryImages: [
     {
       id: 1,
-      name: "Cardio Zone",
-      description: "Treadmills, bikes, ellipticals with city view",
-      image: "Modern cardio equipment with large windows overlooking downtown"
+      description: "Modern cardio equipment with city skyline view",
+      alt: "Cardio area with treadmills and city view"
     },
     {
       id: 2,
-      name: "Free Weights",
-      description: "Complete dumbbell and barbell collection",
-      image: "Well-organized free weight area with mirrors and rubber flooring"
+      description: "Professional free weights section with mirrors",
+      alt: "Free weights area with organized dumbbells"
     },
     {
       id: 3,
-      name: "Strength Machines",
-      description: "Latest Technogym and Life Fitness equipment",
-      image: "Row of modern strength training machines in bright lighting"
+      description: "Group fitness studio with hardwood floors",
+      alt: "Studio room for group classes"
     },
     {
       id: 4,
-      name: "Functional Training",
-      description: "Battle ropes, kettlebells, suspension trainers",
-      image: "Open functional training space with various equipment"
-    }
-  ],
-  trainers: [
-    {
-      id: 1,
-      name: "Sarah Johnson",
-      specialization: "Weight Loss & Cardio",
-      experience: "5 years",
-      image: "Female trainer in athletic wear holding dumbbells, smiling"
+      description: "Modern strength training machines",
+      alt: "Strength equipment area"
     },
     {
-      id: 2,
-      name: "Mike Rodriguez",
-      specialization: "Strength Training",
-      experience: "8 years",
-      image: "Male trainer spotting someone on bench press, professional pose"
-    },
-    {
-      id: 3,
-      name: "Lisa Chen",
-      specialization: "Yoga & Flexibility",
-      experience: "6 years",
-      image: "Female trainer in yoga pose on mat, peaceful expression"
+      id: 5,
+      description: "Reception and lounge area",
+      alt: "Clean reception area with comfortable seating"
     }
   ],
-  mapPlaceholder: "Interactive map showing downtown location with nearby parking and public transport"
+  services: [
+    {
+      name: "Cardio Training",
+      description: "Treadmills, ellipticals, and stationary bikes",
+      icon: "💓"
+    },
+    {
+      name: "Zumba Classes",
+      description: "High-energy dance fitness sessions",
+      icon: "💃"
+    },
+    {
+      name: "Strength Training",
+      description: "Free weights and resistance machines",
+      icon: "💪"
+    },
+    {
+      name: "Yoga & Pilates",
+      description: "Mind-body fitness classes",
+      icon: "🧘"
+    },
+    {
+      name: "Personal Training",
+      description: "One-on-one fitness coaching",
+      icon: "👨‍🏫"
+    },
+    {
+      name: "Spinning Classes",
+      description: "Indoor cycling workouts",
+      icon: "🚴"
+    }
+  ]
 };
 
 export const branch2Data = {
   name: "Suburban Branch",
   address: "456 Oak Avenue, Suburbia",
-  equipment: [
+  mapLink: "https://maps.google.com/?q=40.7505,-73.9934",
+  galleryImages: [
     {
       id: 1,
-      name: "Olympic Lifting",
-      description: "Dedicated Olympic lifting platform with competition bars",
-      image: "Olympic lifting platform with barbells and bumper plates"
+      description: "Spacious CrossFit area with pull-up rigs",
+      alt: "CrossFit training area with equipment"
     },
     {
       id: 2,
-      name: "Group Class Studio",
-      description: "Spacious mirrored studio for group fitness classes",
-      image: "Large studio room with mirrors, sound system, and exercise mats"
+      description: "Olympic lifting platform with competition bars",
+      alt: "Olympic weightlifting area"
     },
     {
       id: 3,
-      name: "CrossFit Box",
-      description: "Full CrossFit setup with pull-up rigs and medicine balls",
-      image: "CrossFit area with pull-up bars, boxes, and open workout space"
+      description: "Large group class studio with mirrored walls",
+      alt: "Group fitness studio with mirrors"
     },
     {
       id: 4,
-      name: "Recovery Zone",
-      description: "Massage chairs, stretching area, and foam rollers",
-      image: "Relaxing recovery area with comfortable seating and stretch mats"
-    }
-  ],
-  trainers: [
-    {
-      id: 1,
-      name: "David Thompson",
-      specialization: "CrossFit & HIIT",
-      experience: "7 years",
-      image: "Male trainer with stopwatch during high-intensity workout"
-    },
-    {
-      id: 2,
-      name: "Emma Wilson",
-      specialization: "Pilates & Core",
-      experience: "4 years",
-      image: "Female trainer demonstrating pilates move on reformer machine"
-    },
-    {
-      id: 3,
-      name: "Carlos Martinez",
-      specialization: "Olympic Lifting",
-      experience: "10 years",
-      image: "Male trainer teaching proper deadlift form to client"
-    }
-  ],
-  classes: [
-    {
-      id: 1,
-      name: "Morning HIIT",
-      time: "6:00 AM - 7:00 AM",
-      days: "Mon, Wed, Fri",
-      instructor: "David Thompson"
-    },
-    {
-      id: 2,
-      name: "Yoga Flow",
-      time: "7:30 AM - 8:30 AM",
-      days: "Tue, Thu, Sat",
-      instructor: "Emma Wilson"
-    },
-    {
-      id: 3,
-      name: "Olympic Lifting",
-      time: "6:00 PM - 7:00 PM",
-      days: "Mon, Thu",
-      instructor: "Carlos Martinez"
-    },
-    {
-      id: 4,
-      name: "Pilates Core",
-      time: "5:30 PM - 6:30 PM",
-      days: "Tue, Fri",
-      instructor: "Emma Wilson"
+      description: "Recovery zone with massage chairs",
+      alt: "Relaxation and recovery area"
     },
     {
       id: 5,
-      name: "Weekend Warrior",
-      time: "9:00 AM - 10:00 AM",
-      days: "Saturday",
-      instructor: "David Thompson"
+      description: "Outdoor training area with artificial turf",
+      alt: "Outdoor functional training space"
     }
   ],
-  mapPlaceholder: "Interactive map showing suburban location with ample parking and family-friendly area"
+  services: [
+    {
+      name: "CrossFit Training",
+      description: "High-intensity functional movement workouts",
+      icon: "🏋️"
+    },
+    {
+      name: "Zumba Fitness",
+      description: "Latin-inspired dance fitness classes",
+      icon: "💃"
+    },
+    {
+      name: "Olympic Lifting",
+      description: "Professional weightlifting coaching",
+      icon: "🥇"
+    },
+    {
+      name: "HIIT Classes",
+      description: "High-intensity interval training",
+      icon: "⚡"
+    },
+    {
+      name: "Family Fitness",
+      description: "Parent-child workout sessions",
+      icon: "👨‍👩‍👧‍👦"
+    },
+    {
+      name: "Recovery Therapy",
+      description: "Massage and stretching services",
+      icon: "🧘‍♂️"
+    }
+  ]
+};
+
+export const nutritionData = {
+  branch1: {
+    meals: [
+      {
+        name: "Power Breakfast",
+        icon: Coffee,
+        calories: "450",
+        prepTime: "10 mins",
+        imageDescription: "Colorful breakfast bowl with oats, berries, and nuts",
+        ingredients: [
+          "Steel-cut oats",
+          "Fresh blueberries",
+          "Almond butter",
+          "Chia seeds",
+          "Greek yogurt"
+        ]
+      },
+      {
+        name: "Urban Lunch",
+        icon: Salad,
+        calories: "520",
+        prepTime: "15 mins",
+        imageDescription: "Fresh salad bowl with grilled protein and quinoa",
+        ingredients: [
+          "Grilled chicken breast",
+          "Quinoa",
+          "Mixed greens",
+          "Avocado",
+          "Cherry tomatoes"
+        ]
+      },
+      {
+        name: "Express Dinner",
+        icon: Utensils,
+        calories: "480",
+        prepTime: "20 mins",
+        imageDescription: "Balanced plate with salmon, vegetables, and sweet potato",
+        ingredients: [
+          "Baked salmon fillet",
+          "Roasted sweet potato",
+          "Steamed broccoli",
+          "Brown rice",
+          "Lemon herb seasoning"
+        ]
+      }
+    ],
+    guidelines: [
+      {
+        icon: Target,
+        title: "Calorie Balance",
+        description: "1,800-2,200 calories per day for optimal energy"
+      },
+      {
+        icon: Droplets,
+        title: "Hydration",
+        description: "8-10 glasses of water daily"
+      },
+      {
+        icon: Zap,
+        title: "Pre-Workout",
+        description: "Light snack 30-60 minutes before exercise"
+      }
+    ]
+  },
+  branch2: {
+    meals: [
+      {
+        name: "Family Breakfast",
+        icon: Apple,
+        calories: "380",
+        prepTime: "12 mins",
+        imageDescription: "Wholesome breakfast with whole grain toast and fruit",
+        ingredients: [
+          "Whole grain bread",
+          "Natural peanut butter",
+          "Sliced banana",
+          "Honey",
+          "Orange juice"
+        ]
+      },
+      {
+        name: "Athlete's Lunch",
+        icon: Utensils,
+        calories: "650",
+        prepTime: "18 mins",
+        imageDescription: "High-protein bowl with lean meat and complex carbs",
+        ingredients: [
+          "Lean ground turkey",
+          "Brown rice",
+          "Black beans",
+          "Bell peppers",
+          "Greek yogurt sauce"
+        ]
+      },
+      {
+        name: "Recovery Dinner",
+        icon: Salad,
+        calories: "550",
+        prepTime: "25 mins",
+        imageDescription: "Nutrient-dense meal with lean protein and vegetables",
+        ingredients: [
+          "Grilled lean beef",
+          "Quinoa pilaf",
+          "Roasted vegetables",
+          "Spinach salad",
+          "Olive oil dressing"
+        ]
+      }
+    ],
+    guidelines: [
+      {
+        icon: Target,
+        title: "Balanced Macros",
+        description: "40% carbs, 30% protein, 30% healthy fats"
+      },
+      {
+        icon: Clock,
+        title: "Meal Timing",
+        description: "Eat every 3-4 hours for sustained energy"
+      },
+      {
+        icon: Zap,
+        title: "Post-Workout",
+        description: "Protein and carbs within 30 minutes after training"
+      }
+    ]
+  },
+  generalTips: [
+    {
+      icon: Droplets,
+      title: "Stay Hydrated",
+      description: "Drink water throughout the day, especially during workouts"
+    },
+    {
+      icon: Apple,
+      title: "Whole Foods",
+      description: "Choose minimally processed, nutrient-dense foods"
+    },
+    {
+      icon: Clock,
+      title: "Consistent Timing",
+      description: "Maintain regular meal schedules for better metabolism"
+    },
+    {
+      icon: Target,
+      title: "Portion Control",
+      description: "Use proper serving sizes to maintain energy balance"
+    }
+  ]
 };

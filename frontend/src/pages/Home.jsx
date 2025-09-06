@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/button';
-import { Play, ArrowRight, Target, Users, Trophy } from 'lucide-react';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../components/ui/dropdown-menu';
+import { ArrowRight, Target, Users, Trophy, ChevronDown, MapPin } from 'lucide-react';
 
 const Home = () => {
   const features = [
@@ -62,19 +63,38 @@ const Home = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/branch1">
-              <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                Branch 1
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+            {/* Branches Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                  <MapPin className="mr-2 h-5 w-5" />
+                  Branches
+                  <ChevronDown className="ml-2 h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-48 bg-white border border-gray-200 rounded-lg shadow-lg">
+                <DropdownMenuItem asChild>
+                  <Link to="/branch1" className="flex items-center px-4 py-3 hover:bg-gray-50 text-gray-700 cursor-pointer">
+                    <MapPin className="mr-2 h-4 w-4 text-red-600" />
+                    Downtown Branch
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/branch2" className="flex items-center px-4 py-3 hover:bg-gray-50 text-gray-700 cursor-pointer">
+                    <MapPin className="mr-2 h-4 w-4 text-red-600" />
+                    Suburban Branch
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             
-            <Link to="/branch2">
+            {/* Nutrition Button */}
+            <Link to="/nutrition">
               <Button 
                 variant="outline" 
                 className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
               >
-                Branch 2
+                Nutrition
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
