@@ -50,17 +50,6 @@ const Home = () => {
           <div className="absolute inset-0 bg-black bg-opacity-70"></div>
         </div>
 
-        {/* Logo at Top Left */}
-        <div className="absolute top-8 left-8 z-20 flex items-center space-x-4">
-          <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center border-4 border-red-500 hover:scale-110 transition-transform duration-300">
-            <span className="text-white font-semibold text-xs text-center">Logo</span>
-          </div>
-          <div className="text-white">
-            <h2 className="text-2xl font-bold">AA Fitness</h2>
-            <p className="text-red-500 font-medium">Gym</p>
-          </div>
-        </div>
-
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
