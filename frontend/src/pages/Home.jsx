@@ -36,13 +36,18 @@ const Home = () => {
             className="w-full h-full object-cover"
           >
             <source
+              src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+              type="video/mp4"
+            />
+            {/* Fallback video source */}
+            <source
               src="https://sample-videos.com/zip/10/mp4/720/mp4/SampleVideo_720x480_1mb.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
           </video>
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-70"></div>
         </div>
 
         {/* Logo at Top Left */}
