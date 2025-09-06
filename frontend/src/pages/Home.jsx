@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div className="relative">
       {/* Hero Section with Video Background */}
-      <div className="relative h-screen flex items-center justify-center overflow-hidden">
+      <div className="relative h-screen flex items-end justify-center overflow-hidden pb-20">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <video
@@ -48,11 +48,11 @@ const Home = () => {
             Your browser does not support the video tag.
           </video>
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         </div>
 
-        {/* Hero Content - Only Buttons */}
-        <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+        {/* Only 2 Buttons at Bottom */}
+        <div className="relative z-10 text-center text-white px-4">
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             {/* Branches Dropdown */}
             <DropdownMenu>
@@ -89,13 +89,6 @@ const Home = () => {
                 <ArrowRight className="ml-3 h-6 w-6" />
               </Button>
             </Link>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </div>

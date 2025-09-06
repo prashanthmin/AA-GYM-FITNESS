@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
 import { MapPin, ChevronLeft, ChevronRight, ExternalLink, QrCode } from 'lucide-react';
@@ -7,6 +7,17 @@ import { branch1Data } from '../data/mockData';
 
 const Branch1 = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => 
+        (prev + 1) % branch1Data.galleryImages.length
+      );
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => 
@@ -35,7 +46,7 @@ const Branch1 = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          {/* Photo Gallery - Left Side */}
+          {/* Auto-Sliding Photo Gallery - Left Side */}
           <div className="space-y-6">
             <h2 className="text-3xl font-bold text-black mb-6">Gym Photo Gallery</h2>
             <div className="relative">
@@ -105,7 +116,7 @@ const Branch1 = () => {
           </div>
         </div>
 
-        {/* Location Section */}
+        {/* Location Section - Simplified */}
         <section className="bg-white rounded-2xl p-8 shadow-lg">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-black mb-4">
@@ -117,7 +128,7 @@ const Branch1 = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Address and Google Maps */}
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -156,16 +167,6 @@ const Branch1 = () => {
                     {branch1Data.qrCode.label}
                   </Button>
                 </Link>
-              </div>
-            </div>
-
-            {/* Map Placeholder */}
-            <div className="h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-              <div className="text-center text-gray-600">
-                <MapPin className="h-16 w-16 mx-auto mb-4 text-red-600" />
-                <h3 className="text-xl font-semibold mb-2">Downtown Location</h3>
-                <p className="text-sm">Interactive map showing location, parking, and nearby landmarks</p>
-                <p className="text-sm mt-2 font-medium">Click "View on Google Maps" to get directions</p>
               </div>
             </div>
           </div>
