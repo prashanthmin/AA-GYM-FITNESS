@@ -45,39 +45,45 @@ const Home = () => {
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
 
+        {/* Logo at Top Left */}
+        <div className="absolute top-8 left-8 z-20 flex items-center space-x-4">
+          <div className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center border-4 border-red-500 hover:scale-110 transition-transform duration-300">
+            <span className="text-white font-semibold text-xs text-center">Logo</span>
+          </div>
+          <div className="text-white">
+            <h2 className="text-2xl font-bold">AA Fitness</h2>
+            <p className="text-red-500 font-medium">Gym</p>
+          </div>
+        </div>
+
         {/* Hero Content */}
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-          {/* Circular Image Placeholder */}
-          <div className="mb-8 flex justify-center">
-            <div className="w-32 h-32 bg-gray-700 rounded-full flex items-center justify-center border-4 border-red-500 hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-semibold text-sm">Logo Placeholder</span>
-            </div>
-          </div>
-
           <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-            <span className="text-white">AA Fitness</span>
-            <span className="block text-red-500 mt-2">Gym</span>
+            <span className="text-white">Transform Your</span>
+            <span className="block text-red-500 mt-2">Body & Mind</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-2xl mx-auto leading-relaxed">
-            Transform your body, elevate your mind, and unleash your potential
+            Choose your preferred branch and start your fitness journey today
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/contact">
+            <Link to="/branch1">
               <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                Join Now
+                Branch 1
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             
-            <Button 
-              variant="outline" 
-              className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-            >
-              <Play className="mr-2 h-5 w-5" />
-              Watch Video
-            </Button>
+            <Link to="/branch2">
+              <Button 
+                variant="outline" 
+                className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+              >
+                Branch 2
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
 
